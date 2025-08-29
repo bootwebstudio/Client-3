@@ -1,5 +1,8 @@
+import main from "../main";
+
 import { useState } from "react";
 import { useEffect } from "react";
+
 import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
@@ -138,18 +141,18 @@ const Home = () => {
         className="w-full p-2 overflow-hidden text-white bg-green-600"
       >
         <div className="space-x-6 flex whitespace-nowrap animate-scroll">
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
         </div>
       </div>
 
@@ -269,7 +272,9 @@ const Home = () => {
               </span>
               <span className="text-lg md:text-xl font-semibold text-green-600">
                 (
-                {Math.round(((ORIGINAL_PRICE - DISCOUNT_PRICE) / ORIGINAL_PRICE) * 100)}
+                {Math.round(
+                  ((ORIGINAL_PRICE - DISCOUNT_PRICE) / ORIGINAL_PRICE) * 100
+                )}
                 % OFF)
               </span>
             </div>
@@ -467,10 +472,10 @@ const Home = () => {
                 Terms & Conditions
               </Link>
               <Link to="/refund-policies" className="text-lg hover:underline">
-                Refund Policy
+                Refund Policies
               </Link>
               <Link to="/shipping-policies" className="text-lg hover:underline">
-                Shipping Policy
+                Shipping Policies
               </Link>
             </div>
 

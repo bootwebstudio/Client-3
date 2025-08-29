@@ -8,8 +8,8 @@ import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
 import HelpSupport from "./pages/HelpSupport";
 import RefundPolicies from "./pages/RefundPolicies";
-import TermsConditions from "./pages/TermsConditions";
 import PrivacyPolicies from "./pages/PrivacyPolicies";
+import TermsConditions from "./pages/TermsConditions";
 import ShippingPolicies from "./pages/ShippingPolicies";
 
 const AppRouter = () => {
@@ -18,7 +18,7 @@ const AppRouter = () => {
       <Route path="/" element={<Home />}></Route>
       <Route path="/thanks" element={<Thanks />}></Route>
       <Route path="/checkout" element={<Checkout />}></Route>
-      
+
       <Route path="/help-support" element={<HelpSupport />}></Route>
       <Route path="/refund-policies" element={<RefundPolicies />}></Route>
       <Route path="/terms-conditions" element={<TermsConditions />}></Route>
