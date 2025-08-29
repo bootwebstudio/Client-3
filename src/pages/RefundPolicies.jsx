@@ -27,7 +27,7 @@ const RefundPolicy = () => {
       {/* Content */}
       <div className="w-full h-full p-6 xl:p-12 xl:px-80 flex flex-col gap-6">
         <h2 className="text-2xl md:text-4xl font-black text-center underline">
-          REFUND POLICY
+          REFUND POLICIES
         </h2>
 
         <p className="text-lg md:text-xl">

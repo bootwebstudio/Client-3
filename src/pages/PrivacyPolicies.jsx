@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
         <p className="text-lg md:text-xl">
           When you make a purchase, we may collect personal details such as:
         </p>
-        <ul className="list-disc list-inside text-lg md:text-xl">
+        <ul className="list-disc ml-6 text-lg md:text-xl">
           <li>Name</li>
           <li>Email address</li>
           <li>Contact Number</li>
@@ -52,7 +52,7 @@ const PrivacyPolicy = () => {
           2. How We Use Your Information
         </h4>
         <p className="text-lg md:text-xl">We use the information to:</p>
-        <ul className="list-disc list-inside text-lg md:text-xl">
+        <ul className="list-disc ml-6 text-lg md:text-xl">
           <li>Process payments securely</li>
           <li>Provide access to the ebook through our Telegram channel</li>
           <li>Send updates about your order and related content</li>
@@ -90,7 +90,7 @@ const PrivacyPolicy = () => {
           We do not sell, trade, or share your personal information with third
           parties, except:
         </p>
-        <ul className="list-disc list-inside text-lg md:text-xl">
+        <ul className="list-disc ml-6 text-lg md:text-xl">
           <li>When required by law</li>
           <li>For secure payment processing through Razorpay</li>
         </ul>
@@ -115,6 +115,12 @@ const PrivacyPolicy = () => {
           <br />
         </p>
         <p className="text-lg md:text-xl font-semibold">{main.email}</p>
+
+        <p className="mt-2 text-sm text-stone-600">
+          *We use third-party services such as Razorpay (for payments) and
+          Telegram (for delivering the eBook). By purchasing, you agree to their
+          respective privacy policies in addition to ours.
+        </p>
       </div>
     </div>
   );

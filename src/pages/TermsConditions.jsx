@@ -54,7 +54,8 @@ const TermsConditions = () => {
         </p>
         <ul className="list-disc ml-6 text-lg md:text-xl">
           <li>
-            The <strong>original price</strong> of the ebook is ₹{ORIGINAL_PRICE}.
+            The <strong>original price</strong> of the ebook is ₹
+            {ORIGINAL_PRICE}.
           </li>
           <li>
             The <strong>current price</strong> may be lower depending on ongoing

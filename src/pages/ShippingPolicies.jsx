@@ -27,7 +27,7 @@ const ShippingPolicy = () => {
       {/* Content */}
       <div className="w-full h-full p-6 xl:p-12 xl:px-80 flex flex-col gap-6">
         <h2 className="text-2xl md:text-4xl font-black text-center underline">
-          SHIPPING POLICY
+          SHIPPING POLICIES
         </h2>
 
         <p className="text-lg md:text-xl">
@@ -84,6 +84,12 @@ const ShippingPolicy = () => {
           Our priority is to make delivery <strong>instant and seamless</strong>
           . If you face any issue in accessing the channel or downloading your
           ebook, just reach out and we'll help you immediately.
+        </p>
+
+        <p className="mt-2 text-sm text-stone-600">
+          *This is a digital product. No physical shipping is required. After
+          payment, you will be redirected to a page containing the Telegram
+          channel link where the eBook is available for access.
         </p>
       </div>
     </div>
