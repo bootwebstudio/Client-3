@@ -3,11 +3,15 @@ const Message = ({ status }) => {
     loading: "Processing payment, please wait...",
     success: "Payment Successful! Redirecting...",
     failed: "Payment Failed. Please try again.",
+    couponFailed: "Expired or invalid coupon code.",
+    couponSuccess: "Wahoo! Coupon code applied.",
   };
   const colors = {
     failed: "bg-red-600",
     success: "bg-green-600",
-    loading: "bg-yellow-500",
+    loading: "bg-amber-500",
+    couponFailed: "bg-red-600",
+    couponSuccess: "bg-green-600",
   };
 
   return (
