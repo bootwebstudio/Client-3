@@ -16,7 +16,7 @@ const Message = ({ status }) => {
 
   return (
     <div
-      className={`p-2 px-6 md:text-lg fixed bottom-6 xl:bottom-12 right-6 xl:right-12 rounded text-white ${colors[status]}`}
+      className={`p-2 px-6 md:text-lg fixed bottom-6 xl:bottom-12 right-6 xl:right-12 rounded border shadow-xl text-white ${colors[status]}`}
     >
       {messages[status]}
     </div>
