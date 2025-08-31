@@ -1,3 +1,5 @@
+import main from "../main";
+
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -24,18 +26,18 @@ const Thanks = () => {
         className="w-full p-2 overflow-hidden text-white bg-green-600"
       >
         <div className="space-x-6 flex whitespace-nowrap animate-scroll">
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
         </div>
       </div>
 

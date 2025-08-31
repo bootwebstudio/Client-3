@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import main from "../main";
+
 // Components
 import Message from "../components/Message";
 
@@ -31,7 +33,7 @@ const Checkout = () => {
   };
 
   // Available Coupons
-  const COUPONS = { CREATOR50: 200 };
+  const COUPONS = { CREATOR50: 50 };
 
   const APPLIED_COUPON = () => {
     const CODE = formData.coupon.toUpperCase();
@@ -69,25 +71,22 @@ const Checkout = () => {
       amount: PRICE * 100,
       currency: "INR",
       name: "Scaling Rs. 1K - 10K",
-      description:
-        "You're purchasing Scaling Rs. 1K - 10K in Just a Month ebook",
+      description: "You're purchasing {main.infiniteText} ebook",
       // image: BrandLogo,
       handler: async function (response) {
         try {
           const { razorpay_payment_id, razorpay_order_id, razorpay_signature } =
             response;
 
-          // ✅ send data to backend
-          await axios.post("https://vaibhav-ebook.vercel.app/api/sendUserData", {
+          await axios.post(`https://${main.domain}/api/sendUserData`, {
             ...formData,
             paymentId: razorpay_payment_id,
             orderId: razorpay_order_id,
             signature: razorpay_signature,
           });
 
-          // ✅ generate invite link from backend
           const linkRes = await axios.post(
-            "https://vaibhav-ebook.vercel.app/api/generateInviteLink",
+            `https://${main.domain}/api/generateInviteLink`,
             { email: formData.email }
           );
 
@@ -95,7 +94,6 @@ const Checkout = () => {
 
           if (!inviteLink) throw new Error("Failed to generate invite link");
 
-          // ✅ save & navigate
           localStorage.setItem("inviteLink", inviteLink);
           SET_STATUS("success");
           navigate("/thanks", { state: { inviteLink } });
@@ -128,18 +126,18 @@ const Checkout = () => {
         className="w-full p-2 overflow-hidden text-white bg-green-600"
       >
         <div className="space-x-6 flex whitespace-nowrap animate-scroll">
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
-          <span>Scaling Rs. 1K - 10K in Just a Month</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
+          <span>{main.infiniteText}</span>
         </div>
       </div>
 
